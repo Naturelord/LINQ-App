@@ -40,12 +40,18 @@ namespace LINQ_App
             // Using Linq to find the large files
             //LINQ2():
             // Practice LINQ with Movies Class
-
+            LINQWithMovies();
         }
 
         public void LINQWithMovies()
         {
-
+            var query = movies.Where(m => m.Year > 2000);
+            string add = "";
+            foreach( var movie in query )
+            {
+                add = add + movie.Title+"\n";
+            }
+            MessageBox.Show(add);
         }
 
         public void LINQ1()
